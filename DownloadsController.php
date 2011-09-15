@@ -1,13 +1,10 @@
 <?php
 /*
- * Downloads Plugin for WolfCMS <http://www.wolfcms.org>
+ * Download Manager Plugin for WolfCMS <http://www.wolfcms.org>
  * Copyright (C) 2011 Shannon Brooks <shannon@brooksworks.com>
- *
- * This file is part of Downloads Plugin. Downloads Plugin is licensed under the GNU GPLv3 license.
- * Please see license.txt for the full license text.
  */
 
-// Security Measure
+//	security measure
 if (!defined('IN_CMS')) { exit(); }
 
 class DownloadsController extends PluginController {
@@ -561,6 +558,9 @@ class DownloadsController extends PluginController {
 		//	set the expires tag to null if it's empty otherwise reformat for the database
 		$input['expires'] = preg_replace('/[^0-9]/','',$input['expires']);
 		$input['expires'] = !empty($input['expires']) ? substr($input['expires'],4).'-'.substr($input['expires'],0,2).'-'.substr($input['expires'],2,2) : '';
+		
+		//	detect active checked or not
+		$input['active'] = isset( $input['active'] ) ? 1 : 0;
 		
 		//return the array
 		return $input;

@@ -1,13 +1,10 @@
 <?php
 /*
- * Downloads Plugin for WolfCMS <http://www.wolfcms.org>
+ * Download Manager Plugin for WolfCMS <http://www.wolfcms.org>
  * Copyright (C) 2011 Shannon Brooks <shannon@brooksworks.com>
- *
- * This file is part of Downloads Plugin. Downloads Plugin is licensed under the GNU GPLv3 license.
- * Please see license.txt for the full license text.
  */
 
-// Security Measure
+//	security measure
 if (!defined('IN_CMS')) { exit(); }
 
 Plugin::setInfos(array(
@@ -77,7 +74,7 @@ function downloads_catch_click($args) {
 //	return download search results in array
 function downloadSearch($terms,$limit=10,$offset=0,$order='name') {
 
-	$where = '1';
+	$where = "`downloads`.`active` = '1' AND ( `downloads`.`expires` < NOW() || `downloads`.`expires` IS NULL )";
 	
 	$order = strtolower($order);
 	$order = in_array($order,explode(',','id,name,filename,active,downloads,expires,created,updated')) && !empty($order) ? $order : 'name' ;
