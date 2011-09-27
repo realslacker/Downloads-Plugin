@@ -72,10 +72,10 @@ function downloads_catch_click($args) {
 }
 
 //	return download search results in array
-function downloadSearch($terms,$limit=10,$offset=0,$order='name') {
+function downloadSearch($terms,$limit=10,$offset=0,$order='name',$admin=false) {
 
-	$where = "`downloads`.`active` = '1' AND ( `downloads`.`expires` < NOW() || `downloads`.`expires` IS NULL )";
-	
+	$where = $admin === true ? $where = '1' : $where = "`downloads`.`active` = '1' AND ( `downloads`.`expires` > NOW() || `downloads`.`expires` IS NULL )";    
+
 	$order = strtolower($order);
 	$order = in_array($order,explode(',','id,name,filename,active,downloads,expires,created,updated')) && !empty($order) ? $order : 'name' ;
 	$order = 'downloads.'.$order.' ASC';

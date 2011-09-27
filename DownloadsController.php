@@ -50,7 +50,7 @@ class DownloadsController extends PluginController {
 		$pages = 0;
 		
 		
-		if ($result = downloadSearch($_REQUEST['q'],25,$offset,$order)) {
+		if ($result = downloadSearch($_REQUEST['q'],25,$offset,$order,true)) {
 			$downloads = $result['downloads'];
 			$count = $result['count'];
 			$pages = ceil($count/25);
