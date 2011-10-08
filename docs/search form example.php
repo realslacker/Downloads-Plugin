@@ -2,8 +2,11 @@
 $page = (isset($_REQUEST['pg']) && !empty($_REQUEST['pg']) ? (int)$_REQUEST['pg'] : 1 );
 $offset = ($page - 1) * 10;
 $forms = array();
+$orderby = 'name';
+$showexpired = false;
+$showinactive = false;
 
-if ($result = downloadSearch($_REQUEST['q'],10,$offset)) {
+if ($result = downloadSearch($_REQUEST['q'],10,$offset,$orderby,$showexpired,$showinactive)) {
 	$forms = $result['downloads'];
 	$count = $result['count'];
 	$pages = ceil($count/10);
