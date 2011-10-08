@@ -72,9 +72,15 @@ function downloads_catch_click($args) {
 }
 
 //	return download search results in array
-function downloadSearch($terms,$limit=10,$offset=0,$order='name',$admin=false) {
+function downloadSearch($terms,$limit=10,$offset=0,$order='name',$expired=false,$inactive=false) {
 
-	$where = $admin === true ? '1' : "`downloads`.`active` = '1' AND ( `downloads`.`expires` > NOW() || `downloads`.`expires` IS NULL )";    
+	$where = '1';
+	
+	//	show expired downloads?
+	if ($expired === false) $where .= " AND ( `downloads`.`expires` > NOW() || `downloads`.`expires` IS NULL )";
+	
+	//	show inactive downloads?
+	if ($inactive === false) $where .= " AND `downloads`.`active` = '1'";
 
 	$order = strtolower($order);
 	$order = in_array($order,explode(',','id,name,filename,active,downloads,expires,created,updated')) && !empty($order) ? $order : 'name' ;
