@@ -1,4 +1,4 @@
-<?
+<?php
 $page = (isset($_REQUEST['pg']) && !empty($_REQUEST['pg']) ? (int)$_REQUEST['pg'] : 1 );
 $offset = ($page - 1) * 10;
 $forms = array();
@@ -18,11 +18,11 @@ if ($result = downloadSearch($_REQUEST['q'],10,$offset,$orderby,$showexpired,$sh
 ?>
 <br />
 <div style="text-align:right;" class="noprint">
-	<form id="forms-search" action="<?=$this->url();?>" method="get">
-		<input type="text" name="q" value="<?=$_REQUEST['q'];?>" /> <input type="submit" value="Search Forms" />
+	<form id="forms-search" action="<?php echo $this->url();?>" method="get">
+		<input type="text" name="q" value="<?php echo $_REQUEST['q'];?>" /> <input type="submit" value="Search Forms" />
 	</form>
 </div>
-<?
+<?php
 if (count($forms) > 0) {
 	echo $pagiation;
 	foreach ($forms as $form) echo downloadBoxFormat($form);

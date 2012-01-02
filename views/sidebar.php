@@ -11,16 +11,16 @@
 if (!defined('IN_CMS')) { exit(); }
 
 ?>
-<p class="button"><a href="<?=get_url('plugin/downloads'); ?>"><img src="<?=PLUGINS_URI;?>/downloads/images/list.png" align="middle" /><?php echo __('List'); ?></a></p>
-<p class="button"><a href="<?=get_url('plugin/downloads/add'); ?>"><img src="<?=PLUGINS_URI;?>/downloads/images/new.png" align="middle" /><?php echo __('Add New'); ?></a></p>
-<p class="button"><a href="<?=get_url('plugin/downloads/documentation'); ?>"><img src="<?=PLUGINS_URI;?>/downloads/images/documentation.png" align="middle" /><?php echo __('Documentation'); ?></a></p>
+<p class="button"><a href="<?php echo get_url('plugin/downloads'); ?>"><img src="<?php echo PLUGINS_URI;?>/downloads/images/list.png" align="middle" /><?php echo __('List'); ?></a></p>
+<p class="button"><a href="<?php echo get_url('plugin/downloads/add'); ?>"><img src="<?php echo PLUGINS_URI;?>/downloads/images/new.png" align="middle" /><?php echo __('Add New'); ?></a></p>
+<p class="button"><a href="<?php echo get_url('plugin/downloads/documentation'); ?>"><img src="<?php echo PLUGINS_URI;?>/downloads/images/documentation.png" align="middle" /><?php echo __('Documentation'); ?></a></p>
 <div class="box">
 <h2><?php echo __('Download Manager Plugin');?></h2>
 <p>
 <?php echo __('Plugin Version').': '.Plugin::getSetting('version', 'downloads'); ?>
 </p>
 <br />
-<h2><?=__('Usage');?></h2>
+<h2><?php echo __('Usage');?></h2>
 <p><strong>Single Download</strong><br />
 <code>&lt;?php echo downloadLinkById($id,$linktext); ?&gt;<br />
 &lt;?php echo downloadBoxById($id); ?&gt;<br />
