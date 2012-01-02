@@ -84,7 +84,7 @@ function downloadSearch($terms,$limit=10,$offset=0,$order='name',$expired=false,
 
 	$order = strtolower($order);
 	$order = in_array($order,explode(',','id,name,filename,active,downloads,expires,created,updated')) && !empty($order) ? $order : 'name' ;
-	$order = 'downloads.'.$order.' ASC';
+	$order = $order == 'downloads' ? 'downloads.'.$order.' DESC' : 'downloads.'.$order.' ASC';
 	
 	if (! empty($terms)) {
 		$querys = preg_replace('/[^a-z0-9 %]/i',' ',$terms);
