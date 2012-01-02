@@ -11,7 +11,11 @@
 if (!defined('IN_CMS')) { exit(); }
 
 //	include the Installer helper
-use_helper('Installer');
+try {
+	use_helper('Installer');
+} catch (Exception $e) {
+    die ($e->getMessage());
+}
 
 //	only support MySQL
 $driver = Installer::getDriver();
