@@ -495,15 +495,15 @@ class DownloadsController extends PluginController {
 	//	store tags into database
 	private function __storetags($tags,$download_id=null) {
 	
+		//	if download_id is provided clear out old tags
+		if (!is_null($download_id)) Record::deleteWhere('DownloadTagConnection','download_id='.Record::escape((int)$download_id));
+		
 		//	check to make sure there are some tags
 		if (empty($tags)) return true;
 		
 		//	take either an array or comma separated list of tags
 		if (!is_array($tags)) $tags = explode(',',$tags);
 		$tags = preg_replace('/[^a-z0-9 _,-]/','',$tags);
-		
-		//	if download_id is provided clear out old tags
-		if (!is_null($download_id)) Record::deleteWhere('DownloadTagConnection','download_id='.Record::escape((int)$download_id));
 		
 		//	find or create tag and connect to download
 		foreach ($tags as $tagname) {
