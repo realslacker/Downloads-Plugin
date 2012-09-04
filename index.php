@@ -1,7 +1,7 @@
 <?php
 /*
  * Download Manager Plugin for WolfCMS <http://www.wolfcms.org>
- * Copyright (C) 2011 Shannon Brooks <shannon@brooksworks.com>
+ * Copyright (C) 2011 Shannon Brooks <http://www.brooksworks.com>
  */
 
 //	security measure
