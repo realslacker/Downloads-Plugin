@@ -1,17 +1,17 @@
 <?php
 
-    /**
-     * YourLanguage file for plugin downloads
-     *
-     * @package Plugins
-     * @subpackage downloads
-     *
-     * @author Your Name <email@domain.something>
-     * @version Wolf x.y.z
-     */
+/**
+ * YourLanguage file for plugin downloads
+ *
+ * @package Plugins
+ * @subpackage downloads
+ *
+ * @author Your Name <email@domain.something>
+ * @version Wolf x.y.z
+ */
 
-    return array(
-    	'Action' => 'Akcja',
+return array(
+	'Action' => 'Akcja',
 	'Active:' => 'Aktywne:',
 	'Add New' => 'Dodaj nowy',
 	'Allowed File Types:' => 'Dozwolone typy plików:',
@@ -83,8 +83,8 @@
 	'The download name; be descriptive' => 'Nazwa pobrania; opisz je.',
 	'URI relative to URI_PUBLIC.' => 'URI relatywny do URI_PUBLIC',
 	'Umask:' => 'Umask:',
-        'Unable to retrieve plugin settings.' => 'Nie można odczytać ustawień wtyczki.',
-        'Unable to store plugin settings!' => 'Nie można zapisać ustawień wtyczki!',        
+	'Unable to retrieve plugin settings.' => 'Nie można odczytać ustawień wtyczki.',
+	'Unable to store plugin settings!' => 'Nie można zapisać ustawień wtyczki!',        
 	'Unknown Version!' => 'Nieznana wersja!',
 	'Upload Controls' => 'Ustawienia przesyłania',
 	'Uploaded file not an allowed file type.' => 'Przesłany typ pliku nie jest dozwolony',
@@ -115,5 +115,5 @@
 	'unable to change permissions' => 'nie można zmienić uprawnień',
 	'updated download' => 'zaktualizowano pobranie',
 	'uploaded file' => 'przesłano plik',
-    );
+);
 
