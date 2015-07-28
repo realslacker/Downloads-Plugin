@@ -1,17 +1,17 @@
 <?php
 
-    /**
-     * YourLanguage file for plugin downloads
-     *
-     * @package Plugins
-     * @subpackage downloads
-     *
-     * @author Your Name <email@domain.something>
-     * @version Wolf x.y.z
-     */
+/**
+ * YourLanguage file for plugin downloads
+ *
+ * @package Plugins
+ * @subpackage downloads
+ *
+ * @author Your Name <email@domain.something>
+ * @version Wolf x.y.z
+ */
 
-    return array(
-    	'Action' => 'Akcja',
+return array(
+	'Action' => 'Akcja',
 	'Active:' => 'Aktywne:',
 	'Add New' => 'Dodaj nowy',
 	'Allowed File Types:' => 'Dozwolone typy plików:',
@@ -30,9 +30,9 @@
 	'Could not save settings!' => 'Nie można było zapisać ustawień!',
 	'Could not update the record in the database.' => 'Nie udało się zaktualizować rekordu w bazie danych.',
 	'Created' => 'Utworzony',
-	'Default PHP directory creation mode; see <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>' => 'Domyślny tryb uprawnień PHP tworzenia katalogu; patrz <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>',
-	'Default PHP file creation mode; see <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>' => 'Domyślny tryb uprawnień PHP tworzenia pliku; patrz <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>',
-	'Default PHP umask; see <a href="http://php.net/manual/en/function.umask.php">umask()</a>' => 'Domyślny umask() PHP; patrz <a href="http://php.net/manual/en/function.umask.php">umask()</a>',
+	'Default PHP directory creation mode' => 'Domyślny tryb uprawnień PHP tworzenia katalogu; patrz <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>',
+	'Default PHP file creation mode' => 'Domyślny tryb uprawnień PHP tworzenia pliku; patrz <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>',
+	'Default PHP umask' => 'Domyślny umask() PHP; patrz <a href="http://php.net/manual/en/function.umask.php">umask()</a>',
 	'Deleted file successfully!' => 'Pomyślnie usunięto plik!',
 	'Describe the download; visible to the public' => 'Opis pliku do pobrania; Widoczny publicznie',
 	'Description:' => 'Opis:',
@@ -83,8 +83,8 @@
 	'The download name; be descriptive' => 'Nazwa pobrania; opisz je.',
 	'URI relative to URI_PUBLIC.' => 'URI relatywny do URI_PUBLIC',
 	'Umask:' => 'Umask:',
-        'Unable to retrieve plugin settings.' => 'Nie można odczytać ustawień wtyczki.',
-        'Unable to store plugin settings!' => 'Nie można zapisać ustawień wtyczki!',        
+	'Unable to retrieve plugin settings.' => 'Nie można odczytać ustawień wtyczki.',
+	'Unable to store plugin settings!' => 'Nie można zapisać ustawień wtyczki!',        
 	'Unknown Version!' => 'Nieznana wersja!',
 	'Upload Controls' => 'Ustawienia przesyłania',
 	'Uploaded file not an allowed file type.' => 'Przesłany typ pliku nie jest dozwolony',
@@ -115,5 +115,5 @@
 	'unable to change permissions' => 'nie można zmienić uprawnień',
 	'updated download' => 'zaktualizowano pobranie',
 	'uploaded file' => 'przesłano plik',
-    );
+);
 

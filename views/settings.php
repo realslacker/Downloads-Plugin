@@ -46,17 +46,17 @@ if (!defined('IN_CMS')) { exit(); }
 			<tr>
 				<td class="label"><label for="umask"><?php echo __('Umask:');?> </label></td>
 				<td class="field"><input name="umask" id="umask" type="text" size="35" maxsize="255" value="<?php echo $umask;?>"/></td>
-				<td class="help"><?php echo __('Default PHP umask; see <a href="http://php.net/manual/en/function.umask.php">umask()</a>');?></td>
+				<td class="help"><?php echo __('Default PHP umask');?></td>
 			</tr>
 			<tr>
 				<td class="label"><label for="dirmode"><?php echo __('Directory Creation Mode:');?> </label></td>
 				<td class="field"><input name="dirmode" id="dirmode" type="text" size="35" maxsize="255" value="<?php echo $dirmode;?>"/></td>
-				<td class="help"><?php echo __('Default PHP directory creation mode; see <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>');?></td>
+				<td class="help"><?php echo __('Default PHP directory creation mode');?></td>
 			</tr>
 			<tr>
 				<td class="label"><label for="filemode"><?php echo __('File Creation Mode:');?> </label></td>
 				<td class="field"><input name="filemode" id="filemode" type="text" size="35" maxsize="255" value="<?php echo $filemode;?>"/></td>
-				<td class="help"><?php echo __('Default PHP file creation mode; see <a href="http://us3.php.net/manual/en/function.chmod.php">chmod()</a>');?></td>
+				<td class="help"><?php echo __('Default PHP file creation mode');?></td>
 			</tr>
 		</table>
 	</fieldset>
