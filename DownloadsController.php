@@ -66,7 +66,11 @@ class DownloadsController extends PluginController {
 
 	//	display documentation
 	public function documentation() {
-		$this->display('downloads/views/documentation');
+		self::__checkPermission('downloads_settings');
+
+		$tempdir = ini_get('upload_tmp_dir') ? ini_get('upload_tmp_dir') : sys_get_temp_dir();
+
+		$this->display('downloads/views/documentation', array('download_path' => CMS_ROOT.'/'.$this->settings['download_path'], 'tempdir' => $tempdir) );
 	}//*/
 
 	//	displays settings of plugin
@@ -418,8 +422,8 @@ class DownloadsController extends PluginController {
 		
 		//	if the uploaded file is not unique return false
 		if (!$hash = $this->__unique($_FILES[$tagname]['tmp_name'])) {
-			//$this->__log(__('error encountered uploading file').'; '.__('the file was not unique; the file already exists'),self::LOG_ERROR);
-			//Flash::set('error',__('the file was not unique; the file already exists'));
+			$this->__log(__('error encountered uploading file').'; '.__('the file was not unique; the file already exists'),self::LOG_ERROR );
+			Flash::set('error',__('the file was not unique; the file already exists') . print_r($_FILES,1) );
 			return false;
 		}
 		

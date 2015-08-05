@@ -113,6 +113,19 @@ function downloadLinkById($download_id,$text=null) {
 	//	return download link
 	return "<a class=\"download-link\" href=\"/download-file/{$download->id}/{$download->filename}\" target=\"_blank\" rel=\"nofollow\">".(!empty($text) ? $text : $download->name)."</a>";
 }
+//	output a download link by download id
+function downloadBoxesAll($text=null) {
+	$return = '';
+
+	//	get download
+	if (!$downloads = Download::findAll()) return "<div><span class=\"download-broken\" title=\"broken download link\">[file not found]</span></div>";
+	
+	//	return download links
+	foreach($downloads as $download){
+		$return .= downloadBoxFormat($download);
+	}
+	return $return;
+}
 
 function downloadBoxById($download_id) {
 	

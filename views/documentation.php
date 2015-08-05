@@ -11,6 +11,27 @@
 if (!defined('IN_CMS')) { exit(); }
 
 ?>
+<h1><?php echo __('Systemtest'); ?></h1>
+<p><?php
+
+echo __('Please check the following lines if Uploading dont work.').'<br>';
+
+$yesno[true] = __('Yes');
+$yesno[false] = '<b>'.__('No').' :-(</b>';
+
+echo '<h3>'.__('Temporary Directory') .'</h3>';
+echo __('Path') . ': ' . $tempdir. '<br>';
+echo __('Directory exits?') . ': ' . $yesno[file_exists($tempdir)].'<br>';
+echo __('Directory is writeable?') .': ' . $yesno[is_writable($tempdir)];
+
+echo '<h3>'.__('Destination Directory') .'</h3>';
+echo __('Path') . ': ' . $download_path. '<br>';
+echo __('Directory exits?') . ': ' . $yesno[file_exists($download_path)].'<br>';
+echo __('Directory is writeable?') .': ' . $yesno[is_writable($download_path)];
+
+?></p>
+<p>&nbsp;</p>
+
 <h1><?php echo __('Documentation'); ?></h1>
 
 <h2>Single Download Options</h2>
