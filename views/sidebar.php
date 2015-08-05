@@ -27,5 +27,6 @@ if (!defined('IN_CMS')) { exit(); }
 &lt;?php echo downloadPlayerById($id,$text); ?&gt;</code></p>
 <p><strong>Multiple Downloads</strong><br />
 <code>&lt;?php echo downloadListByTag($tags); ?&gt;<br />
-&lt;?php echo downloadBoxesByTag($tags); ?&gt;</code></p>
+&lt;?php echo downloadBoxesByTag($tags); ?&gt;
+&lt;?php echo downloadBoxesAll(); ?&gt;</code></p>
 </div>
